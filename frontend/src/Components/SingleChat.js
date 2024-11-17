@@ -15,7 +15,7 @@ import { TiMessageTyping } from 'react-icons/ti';
 
 // const ENDPOINT = "https://chatter-chat-web-app.herokuapp.com/";
 // const ENDPOINT = "http://127.0.0.1:5000/"
-const ENDPOINT = "https://chatter-m.onrender.com/"
+const ENDPOINT = "https://mern-chat-luo6.onrender.com/"
 var socket, selectedChatCompare;
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
 
@@ -62,7 +62,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         }
     };
     useEffect(() => {
-        socket = io("https://mern-chat-luo6.onrender.com/");
+        socket = io(ENDPOINT);
         socket.emit("setup", user);
         socket.on("connected", () => setSocketConnected(true));
         socket.on("typing", () => setIsTyping(true));
