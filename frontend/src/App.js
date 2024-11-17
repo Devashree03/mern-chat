@@ -6,7 +6,7 @@ import ChatPage from "./Pages/ChatPage";
 import axios from 'axios'
 
 function App() {
-  const ENDPOINT = "https://chatter-m.onrender.com";
+  const ENDPOINT = "https://mern-chat-luo6.onrender.com";
   axios.interceptors.request.use(
     (config) => {
 
